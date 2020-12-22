@@ -1,8 +1,11 @@
 import './App.css';
+import Routing from './components/routing/route';
 
 function App() {
   return (
-    <div></div>
+    <div>
+      <Routing />
+    </div>
   );
 }
 
