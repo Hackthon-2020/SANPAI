@@ -7,6 +7,7 @@ class Navigation extends React.Component {
       <div>
         <Link to="/">Home</Link>
         <Link to="/omikuji">Omikuji</Link>
+        <Link to="/shrine">Shrine</Link>
       </div>
     )
   }
