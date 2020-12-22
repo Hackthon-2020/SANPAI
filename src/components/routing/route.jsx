@@ -12,7 +12,7 @@ class Routing extends Component {
       <React.Fragment>
         <Router>
           <div>
-            <Navigation /><hr/>
+            <Navigation />
             <Route exact path='/' render={ () => <Home name={'ホームページ'}/> }/>
             <Route path='/omikuji' render={ () => <Omikuji name={'おみくじ'}/> }/>
             <Route path='/shrine' render={ () => <Shrine name={'神社選択'}/> }/>
