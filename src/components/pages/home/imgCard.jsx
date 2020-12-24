@@ -8,9 +8,11 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import OmikujiBox from '../../../assets/img/omikuji/omikuji-box.png'
+import Osaisen from '../../../assets/img/osaisen/suzu.png'
+
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 350,
   },
 });
 
@@ -22,14 +24,30 @@ export default function ImgCard() {
       <CardActionArea>
         <CardMedia
           component="img"
-          alt="Contemplative Reptile"
-          height="140"
+          height="450"
           image={OmikujiBox}
-          title="Contemplative Reptile"
+          title="おみくじページへ遷移"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             おみくじ
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="700"
+          image={Osaisen}
+          title="お賽銭ページへ遷移"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            お賽銭
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
 
