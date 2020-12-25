@@ -1,9 +1,13 @@
-import React from 'react'
-import ImgCard from './imgCard'
+import React from 'react';
+import CardList from '../../card/cardList/index';
+import './index.css';
+
 class Home extends React.Component {
   render(){
     return(
-      <ImgCard />
+      <React.Fragment>
+        <CardList />
+      </React.Fragment>
     )
   }
 }
