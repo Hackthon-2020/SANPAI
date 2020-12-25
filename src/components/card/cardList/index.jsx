@@ -19,7 +19,7 @@ export default function CardList() {
           imgName={OmikujiBox}
           title={"Omikuji Image"}
           text={"おみくじ"}
-          link={()=>history.push('/sanpai')}
+          link={()=>history.push('/omikuji')}
           />
         </div>
       </Grid>
@@ -29,7 +29,7 @@ export default function CardList() {
         imgName={OsaisenImg}
         title={"Osaisen Image"}
         text={"お賽銭"}
-        link={()=>history.push('/osaisen')}
+        link={()=>history.push('/sanpai')}
         />
       </div>
       </Grid>
