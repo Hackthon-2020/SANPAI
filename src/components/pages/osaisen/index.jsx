@@ -6,9 +6,9 @@ import coin50yen from '../../../assets/img/osaisen/coins/coin-50yen.png';
 import coin100yen from '../../../assets/img/osaisen/coins/coin-100yen.png';
 import coin500yen from '../../../assets/img/osaisen/coins/coin-500yen.png';
 import offertoryBox from '../../../assets/img/osaisen/offertory-box.png';
-import styles from '../../../assets/styles/style.css';
-import App from '../../../App';
-import amount1yen from './increaseMoney';
+import './index.css';
+// import App from '../../../App';
+// import amount1yen from './increaseMoney';
 
 class Shrine extends React.Component {
   constructor(props) {
