@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Map from './map';
 
 class Shrine extends React.Component {
   render(){
@@ -6,6 +7,7 @@ class Shrine extends React.Component {
       <div>
         <h1>{this.props.name}</h1>
         <h2>神社を選んでください。</h2> 
+        <Map />
       </div>
     )
   }
