@@ -1,0 +1,11 @@
+.Navbar {
+  flex-shrink: 1;
+}
+
+.Links {
+  background-color: lightgreen;
+}
+
+.link {
+  max-height: 70px;
+}
