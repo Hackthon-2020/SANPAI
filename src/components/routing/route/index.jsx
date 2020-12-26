@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navigation from '../navigation/index';
 import Omikuji from '../../pages/omikuji/index';
 import Home from '../../pages/home/index';
-import Shrine from '../../pages/shrine/index';
-import Sanpai from '../../pages/sanpai/index';
+import Osaisen from '../../pages/osaisen/index';
 
 
 class Routing extends Component {
@@ -14,10 +13,9 @@ class Routing extends Component {
         <Router>
           <div>
             <Navigation />
-            <Route exact path='/' render={ () => <Home name={'ホームページ'}/> }/>
+            <Route exact path='/' render={ () => <Home/> }/>
             <Route path='/omikuji' render={ () => <Omikuji name={'おみくじ'}/> }/>
-            <Route path='/sanpai' render={ () => <Sanpai name={'参拝'}/> }/>
-            <Route path='/shrine' render={ () => <Shrine name={'神社を見つける'}/> }/>
+            <Route path='/osaisen' render={ () => <Osaisen name={'お賽銭'}/> }/>
           </div>
         </Router>
       </React.Fragment>

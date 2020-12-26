@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Sawarabi Mincho' sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +18,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.bg-img {
+  background-image: url("../src/assets/img/forest.jpg");
+  background-blend-mode: lighten;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color:rgba(255,255,255,0.8);
+  height: 100%;
 }
