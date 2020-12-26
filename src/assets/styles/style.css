@@ -1,0 +1,30 @@
+
+
+.coins_alignment ul{
+    text-align: center;
+}
+.coins_alignment li{
+    list-style-type: none;
+    overflow: hidden;
+    letter-spacing: -.5em;
+    display: inline;
+    float: left;
+    list-style: none;
+}
+.coins_alignment {
+    display: inline-block;
+}
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-box img {
+    vertical-align: top;
+}
+.coin-img {
+    width: 50px;
+    height: auto;
+}
+.osaisen{
+    text-align: center;
+}
