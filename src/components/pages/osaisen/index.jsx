@@ -6,7 +6,6 @@ import coin50yen from '../../../assets/img/osaisen/coins/coin-50yen.png';
 import coin100yen from '../../../assets/img/osaisen/coins/coin-100yen.png';
 import coin500yen from '../../../assets/img/osaisen/coins/coin-500yen.png';
 import offertoryBox from '../../../assets/img/osaisen/offertory-box.png';
-<<<<<<< HEAD:src/components/pages/sanpai/index.jsx
 import styles from '../../../assets/styles/style.css';
 import App from '../../../App';
 // import amount1yen from './increaseMoney';
@@ -15,11 +14,6 @@ import linepayLogo from '../../../assets/img/osaisen/payments/linepayLogo.png';
 import rakutenpayLogo from '../../../assets/img/osaisen/payments/rakutenpayLogo.jpg';
 import resetButton from '../../../assets/img/resetButton.jpg';
 import { useHistory } from 'react-router-dom';
-=======
-import './index.css';
-// import App from '../../../App';
-// import amount1yen from './increaseMoney';
->>>>>>> master:src/components/pages/osaisen/index.jsx
 
 class Shrine extends React.Component {
   constructor(props) {
@@ -96,21 +90,6 @@ class Shrine extends React.Component {
           <h1>お賽銭</h1>
           <img src={offertoryBox} alt="offertoryBox" className="offertory-box"/>
           <ul className="coins_alignment flex-box">
-<<<<<<< HEAD:src/components/pages/sanpai/index.jsx
-            {/* <p>{this.state.count1yen}</p> */}
-            <li> <button><img src={coin1yen} alt="1yen" className="coin-img" onClick={() => this.handleClick1yen()} /></button> </li>
-            {/* <p>{this.state.count5yen}</p> */}
-            <li> <button onClick={() => this.handleClick5yen()}><img src={coin5yen} alt="1yen" className="coin-img" /></button> </li>
-            {/* <p>{this.state.count10yen}</p> */}
-            <li> <button onClick={() => this.handleClick10yen()}><img src={coin10yen} alt="1yen" className="coin-img" /></button> </li>
-            {/* <p>{this.state.count50yen}</p> */}
-            <li> <button onClick={() => this.handleClick50yen()}><img src={coin50yen} alt="1yen" className="coin-img" /></button> </li>
-            {/* <p>{this.state.count100yen}</p> */}
-            <li> <button onClick={() => this.handleClick100yen()}><img src={coin100yen} alt="1yen" className="coin-img" /></button> </li>
-            {/* <p>{this.state.count500yen}</p> */}
-            <li> <button onClick={() => this.handleClick500yen()}><img src={coin500yen} alt="1yen" className="coin-img" /></button> </li>
-            <button onClick={() => this.resetButton()}><img src={resetButton} alt="resetButton" className="coin-img" /></button>
-=======
             <p>{this.state.count1yen}</p>
             <li>
               <button onClick={() => this.handleClick1yen()}>
@@ -147,7 +126,6 @@ class Shrine extends React.Component {
                 <img src={coin500yen} alt="500yen" className="coin-img" />
               </button>
             </li>
->>>>>>> master:src/components/pages/osaisen/index.jsx
           </ul>
           <h1>合計金額：{this.state.count1yen + this.state.count5yen + this.state.count10yen + this.state.count50yen + this.state.count100yen + this.state.count500yen}円</h1>
           <h3>お支払い方法</h3>
