@@ -5,7 +5,7 @@ class Omikuji extends React.Component {
     return(
       <div>
         <h1>{this.props.name}</h1>
-        <h2>おみくじを引いてください。</h2>
+        <h2>{this.props.text}おみくじを引いてください。</h2>
       </div>
     )
   }
