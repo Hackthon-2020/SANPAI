@@ -1,8 +1,6 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import OmikujiBox from '../../../assets/img/omikuji/omikuji-box.png';
 import OsaisenImg from '../../../assets/img/osaisen/suzu.png';
-// import ShrineImg from '../../../assets/img/osaisen/torii.png';
 import ImgCard from '../imgCard/index';
 import Grid from "@material-ui/core/Grid";
 import { useHistory } from 'react-router-dom';

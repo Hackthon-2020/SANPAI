@@ -1,33 +1,42 @@
-.coins_alignment ul{
-
+body {
+    font-family: 'Sawarabi Mincho' !important;
 }
-.coins_alignment li{
-    list-style-type: none;
-    overflow: hidden;
-    letter-spacing: -.5em;
-    display: inline;
-    float: left;
-    list-style: none;
-}
+.bg-img {
+    background-image: url("../../../assets/img/osaisen/osaisenBg.png");
+    background-blend-mode: lighten;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color:rgba(255,255,255,0.5);
+    height: 100%;
+  }
 .coins_alignment {
     display: inline-block;
 }
-.flex-box {
-    display: flex;
-    flex-wrap: wrap;
-}
-.flex-box img {
-    vertical-align: top;
-}
-.coin-img {
-    width: 50px;
-    height: 50px;
-    margin: 1em;
-}
-.osaisen{
+.coins_alignment ul{
     text-align: center;
 }
-.offertory-box{
-    width: 30%;
+.coins_alignment li{
+    list-style-type: none;
+    display: inline;
+    float: left;
+}
+.coin-img {
+    width: 100%;
     height: auto;
+}
+.offertory-box{
+    max-height: 30%;
+    width: auto;
+    margin: auto auto;
+    width: 40%;
+    position: relative; bottom: 5em;
+}
+.centering {
+    text-align: center;
+}
+.coins-button {
+    position: relative; bottom: 5em;
+}
+.sum-money {
+    padding-top: 1em;
 }
