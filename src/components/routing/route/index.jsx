@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navigation from '../navigation/index';
 import Omikuji from '../../pages/omikuji/index';
 import Home from '../../pages/home/index';
-import Shrine from '../../pages/shrine/index';
+import Shrine from '../../pages/sanpai/index';
 import Sanpai from '../../pages/sanpai/index';
 
 
