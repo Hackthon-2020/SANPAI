@@ -8,11 +8,10 @@ import Inari from '../../../assets/img/shrine/inari.jpg';
 
 import ImgCard from '../imgCard/index';
 import Grid from "@material-ui/core/Grid";
-import { useHistory } from 'react-router-dom';
-
+// import { useHistory } from 'react-router-dom';
 
 export default function ShrineCard() {
-  const history = useHistory();
+  // const history = useHistory();
 
   return (
     <Grid container>
@@ -22,7 +21,7 @@ export default function ShrineCard() {
           imgName={Isejin}
           title={"Isejin Image"}
           text={"伊勢神宮"}
-          link={()=>history.push('/omikuji')}
+          // link={()=>history.push('/omikuji')}
           />
         </div>
       </Grid>
@@ -32,7 +31,7 @@ export default function ShrineCard() {
         imgName={Izumo}
         title={"Izumo Image"}
         text={"出雲大社"}
-        link={()=>history.push('/omikuji')}
+        // link={()=>history.push('/omikuji')}
         />
       </div>
       </Grid>
@@ -42,7 +41,7 @@ export default function ShrineCard() {
         imgName={Dazaifu}
         title={"Dazaifu Image"}
         text={"太宰府天満宮"}
-        link={()=>history.push('/omikuji')}
+        // link={()=>history.push('/omikuji')}
         />
       </div>
       </Grid>
@@ -52,7 +51,7 @@ export default function ShrineCard() {
           imgName={Miyajidake}
           title={"Miyajidake Image"}
           text={"宮地嶽神社"}
-          link={()=>history.push('/omikuji')}
+          // link={()=>history.push('/omikuji')}
           />
         </div>
       </Grid>
@@ -62,7 +61,7 @@ export default function ShrineCard() {
         imgName={Miyajima}
         title={"Miyajima Image"}
         text={"厳島神社"}
-        link={()=>history.push('/omikuji')}
+        // link={()=>history.push('/omikuji')}
         />
       </div>
       </Grid>
@@ -72,7 +71,7 @@ export default function ShrineCard() {
         imgName={Inari}
         title={"Inari Image"}
         text={"伏見稲荷神社"}
-        link={()=>history.push('/omikuji')}
+        // link={()=>history.push('/omikuji')}
         />
       </div>
       </Grid>

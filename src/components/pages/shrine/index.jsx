@@ -1,5 +1,6 @@
 import React from 'react';
 import ShrineCard from '../../card/shrineCard/index';
+import ShrineDialog from '../../modal/dialog';
 
 class Shrine extends React.Component {
   
@@ -8,6 +9,7 @@ class Shrine extends React.Component {
       <div>
         <h1>{this.props.name}</h1>
         <h2>神社を選んでください。</h2> 
+        <ShrineDialog />
         <ShrineCard />
       </div>
     )

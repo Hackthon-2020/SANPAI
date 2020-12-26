@@ -33,6 +33,16 @@ export default function CardList() {
           />
         </div>
       </Grid>
+      <Grid item xs={3}>
+        <div>
+          <ImgCard 
+          imgName={OmikujiBox}
+          title={"Omikuji Image"}
+          text={"じんじゃ"}
+          link={()=>history.push('/shrine')}
+          />
+        </div>
+      </Grid>
     </Grid>
   );
 }
