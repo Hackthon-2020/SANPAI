@@ -12,6 +12,7 @@ import omikujiImg from '../../../assets/img/omikuji/omikuji-box.png'
 import setOmikuji from '../../funcs/setOmikuji';
 // import setOmikuji from './setOmikuji'
 // import { useState } from 'react';
+import setOmikujiMsg from '../../funcs/setOmikujiMsg'
 
 class OmikujiPlay extends React.Component {
     constructor(props) {
@@ -107,6 +108,7 @@ class OmikujiPlay extends React.Component {
                         その他
                     </Typography>
                 </this.DialogContent>
+                <setOmikujiMsg msg={this.state.msg}/>
                 <this.DialogActions>
                     <Button autoFocus onClick={this.handleClose} color="primary">
                         Back to Home

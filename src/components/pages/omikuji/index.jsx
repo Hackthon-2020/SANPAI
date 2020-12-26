@@ -5,14 +5,6 @@ import React from 'react'
 import OmikujiPlay from './omikujiPlay'
 
 class Omikuji extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     resOmikuji: null,
-  //     msgOmikuji: "",
-  //   }
-  // }
-  //classes = useStyles();
 
   render(){
     //const msg = this.omikuji.msg
