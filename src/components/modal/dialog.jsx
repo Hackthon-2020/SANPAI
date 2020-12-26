@@ -15,13 +15,13 @@ export default function SimpleDialog(props) {
 
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      <DialogTitle id="simple-dialog-title">選択してください</DialogTitle>
+      <DialogTitle id="simple-dialog-title">{props.text}を選択中</DialogTitle>
       <List>
         <ListItem button >
-          <ListItemText primary="おみくじ" onClick={()=>history.push('/omikuji')}/>
+          <ListItemText primary="おみくじを引く" onClick={()=>history.push('/omikuji')}/>
         </ListItem>
         <ListItem button >
-          <ListItemText primary="お賽銭" onClick={()=>history.push('/osaisen')}/>
+          <ListItemText primary="お賽銭する" onClick={()=>history.push('/osaisen')}/>
         </ListItem>
       </List>
     </Dialog>

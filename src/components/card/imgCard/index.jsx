@@ -54,7 +54,7 @@ export default function ImgCard (props){
               title={props.title}
               onClick={handleClickOpen}
             />
-            <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
+            <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} text={props.text}/>
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">{props.text}</Typography>
             </CardContent>
