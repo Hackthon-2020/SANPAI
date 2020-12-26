@@ -6,32 +6,36 @@ import coin50yen from '../../../assets/img/osaisen/coins/coin-50yen.png';
 import coin100yen from '../../../assets/img/osaisen/coins/coin-100yen.png';
 import coin500yen from '../../../assets/img/osaisen/coins/coin-500yen.png';
 import offertoryBox from '../../../assets/img/osaisen/offertory-box.png';
-import './index.css';
-// import App from '../../../App';
+import styles from '../../../assets/styles/style.css';
+import App from '../../../App';
 // import amount1yen from './increaseMoney';
+import paypayLogo from '../../../assets/img/osaisen/payments/paypayLogo.jpg';
+import linepayLogo from '../../../assets/img/osaisen/payments/linepayLogo.png';
+import rakutenpayLogo from '../../../assets/img/osaisen/payments/rakutenpayLogo.jpg';
+import resetButton from '../../../assets/img/resetButton.jpg';
+import { useHistory } from 'react-router-dom';
 
 class Shrine extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      count1yen: 0,
-      count5yen: 0,
-      count10yen: 0,
-      count50yen: 0,
-      count100yen: 0,
-      count500yen: 0
+    this.state = {count1yen: 0, count5yen: 0, count10yen: 0, count50yen: 0, count100yen: 0, count500yen: 0
     };
   }
 
-  componentDidMount(){
+  componentDidMount() {
 
   }
 
-  componentDidUpdate(){
-
+  componentDidUpdate() {
+    if (this.state.count1yen + this.state.count5yen + this.state.count10yen + this.state.count50yen + this.state.count100yen + this.state.count500yen > 10000) {
+      window.alert("合計金額が１万円以上は選択できません。");
+      this.setState({
+        count1yen: 0, count5yen: 0, count10yen: 0, count50yen: 0, count100yen: 0, count500yen: 0
+      })
+    }
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
 
   }
 
@@ -71,6 +75,12 @@ class Shrine extends React.Component {
       count500yen: this.state.count500yen + 500
     });
     console.log(this.state.count500yen)
+  }
+  
+  resetButton() {
+    this.setState({
+      count1yen: 0, count5yen: 0, count10yen: 0, count50yen: 0, count100yen: 0, count500yen: 0
+    });
   }
 
   render() {
@@ -117,7 +127,11 @@ class Shrine extends React.Component {
               </button>
             </li>
           </ul>
-          <h1>合計金額：{this.state.count1yen+this.state.count5yen+this.state.count10yen+this.state.count50yen+this.state.count100yen+this.state.count500yen}円</h1>
+          <h1>合計金額：{this.state.count1yen + this.state.count5yen + this.state.count10yen + this.state.count50yen + this.state.count100yen + this.state.count500yen}円</h1>
+          <h3>お支払い方法</h3>
+          <img src={rakutenpayLogo} alt="rakuten" className="coin-img"/>
+          <img src={paypayLogo} alt="paypay" className="coin-img"/>
+          <img src={linepayLogo} alt="line" className="coin-img" />
         </div>
       </React.Fragment>
     )
