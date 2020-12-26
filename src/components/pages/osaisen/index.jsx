@@ -78,20 +78,44 @@ class Shrine extends React.Component {
       <React.Fragment>
         <div className='osaisen'>
           <h1>お賽銭</h1>
-          <img src={offertoryBox} alt="offertoryBox" />
+          <img src={offertoryBox} alt="offertoryBox" className="offertory-box"/>
           <ul className="coins_alignment flex-box">
             <p>{this.state.count1yen}</p>
-            <li> <button><img src={coin1yen} alt="1yen" className="coin-img" onClick={() => this.handleClick1yen()} /></button> </li>
+            <li>
+              <button onClick={() => this.handleClick1yen()}>
+                <img src={coin1yen} alt="1yen" className="coin-img" />
+              </button>
+            </li>
             <p>{this.state.count5yen}</p>
-            <li> <button onClick={() => this.handleClick5yen()}><img src={coin5yen} alt="1yen" className="coin-img" /></button> </li>
+            <li>
+              <button onClick={() => this.handleClick5yen()}>
+                <img src={coin5yen} alt="5yen" className="coin-img" />
+              </button>
+            </li>
             <p>{this.state.count10yen}</p>
-            <li> <button onClick={() => this.handleClick10yen()}><img src={coin10yen} alt="1yen" className="coin-img" /></button> </li>
+            <li>
+              <button onClick={() => this.handleClick10yen()}>
+                <img src={coin10yen} alt="10yen" className="coin-img" />
+              </button>
+            </li>
             <p>{this.state.count50yen}</p>
-            <li> <button onClick={() => this.handleClick50yen()}><img src={coin50yen} alt="1yen" className="coin-img" /></button> </li>
+            <li>
+              <button onClick={() => this.handleClick50yen()}>
+                <img src={coin50yen} alt="50yen" className="coin-img" />
+                </button>
+            </li>
             <p>{this.state.count100yen}</p>
-            <li> <button onClick={() => this.handleClick100yen()}><img src={coin100yen} alt="1yen" className="coin-img" /></button> </li>
+            <li>
+              <button onClick={() => this.handleClick100yen()}>
+                <img src={coin100yen} alt="100yen" className="coin-img" />
+              </button>
+            </li>
             <p>{this.state.count500yen}</p>
-            <li> <button onClick={() => this.handleClick500yen()}><img src={coin500yen} alt="1yen" className="coin-img" /></button> </li>
+            <li>
+              <button onClick={() => this.handleClick500yen()}>
+                <img src={coin500yen} alt="500yen" className="coin-img" />
+              </button>
+            </li>
           </ul>
           <h1>合計金額：{this.state.count1yen+this.state.count5yen+this.state.count10yen+this.state.count50yen+this.state.count100yen+this.state.count500yen}円</h1>
         </div>
@@ -99,6 +123,5 @@ class Shrine extends React.Component {
     )
   }
 }
-
 
 export default Shrine;

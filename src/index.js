@@ -6,10 +6,8 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className='bg-image'>
-      <div className='bg-opacity'>
-        <App />
-      </div>
+    <div className='bg-opacity'>
+      <App />
     </div>
   </React.StrictMode>,
   document.getElementById('root')
