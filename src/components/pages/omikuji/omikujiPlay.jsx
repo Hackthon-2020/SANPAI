@@ -94,7 +94,8 @@ class OmikujiPlay extends React.Component {
                 </this.DialogTitle>
                 <this.DialogContent dividers>
                     <Typography gutterBottom>
-                        今日のあなたの運勢はまあまあ良いですよ。
+                        今日のあなたの運勢はまあまあ良いですよ。<br/>
+                        TextType = {this.state.res %20}
                     </Typography>
                     <Typography gutterBottom>
                         ラッキーカラー：赤
