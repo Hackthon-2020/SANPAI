@@ -5,7 +5,7 @@ import Omikuji from '../../pages/omikuji/index';
 import Home from '../../pages/home/index';
 import Shrine from '../../pages/sanpai/index';
 import Sanpai from '../../pages/sanpai/index';
-
+import Payment from '../../pages/sanpai/payment/index';
 
 class Routing extends Component {
   render() {
@@ -18,6 +18,7 @@ class Routing extends Component {
             <Route path='/omikuji' render={ () => <Omikuji name={'おみくじ'}/> }/>
             <Route path='/sanpai' render={ () => <Sanpai name={'参拝'}/> }/>
             <Route path='/shrine' render={ () => <Shrine name={'神社を見つける'}/> }/>
+            <Route path='/sanpai/payment' render={ () => <Payment name={'支払いをする'}/> }/>
           </div>
         </Router>
       </React.Fragment>

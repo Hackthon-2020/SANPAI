@@ -8,30 +8,34 @@ import coin500yen from '../../../assets/img/osaisen/coins/coin-500yen.png';
 import offertoryBox from '../../../assets/img/osaisen/offertory-box.png';
 import styles from '../../../assets/styles/style.css';
 import App from '../../../App';
-import amount1yen from './increaseMoney';
+// import amount1yen from './increaseMoney';
+import paypayLogo from '../../../assets/img/osaisen/payments/paypayLogo.jpg';
+import linepayLogo from '../../../assets/img/osaisen/payments/linepayLogo.png';
+import rakutenpayLogo from '../../../assets/img/osaisen/payments/rakutenpayLogo.jpg';
+import resetButton from '../../../assets/img/resetButton.jpg';
+import { useHistory } from 'react-router-dom';
 
 class Shrine extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      count1yen: 0,
-      count5yen: 0,
-      count10yen: 0,
-      count50yen: 0,
-      count100yen: 0,
-      count500yen: 0
+    this.state = {count1yen: 0, count5yen: 0, count10yen: 0, count50yen: 0, count100yen: 0, count500yen: 0
     };
   }
 
-  componentDidMount(){
+  componentDidMount() {
 
   }
 
-  componentDidUpdate(){
-
+  componentDidUpdate() {
+    if (this.state.count1yen + this.state.count5yen + this.state.count10yen + this.state.count50yen + this.state.count100yen + this.state.count500yen > 10000) {
+      window.alert("合計金額が１万円以上は選択できません。");
+      this.setState({
+        count1yen: 0, count5yen: 0, count10yen: 0, count50yen: 0, count100yen: 0, count500yen: 0
+      })
+    }
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
 
   }
 
@@ -72,6 +76,12 @@ class Shrine extends React.Component {
     });
     console.log(this.state.count500yen)
   }
+  
+  resetButton() {
+    this.setState({
+      count1yen: 0, count5yen: 0, count10yen: 0, count50yen: 0, count100yen: 0, count500yen: 0
+    });
+  }
 
   render() {
     return (
@@ -80,20 +90,25 @@ class Shrine extends React.Component {
           <h1>お賽銭</h1>
           <img src={offertoryBox} alt="offertoryBox" />
           <ul className="coins_alignment flex-box">
-            <p>{this.state.count1yen}</p>
+            {/* <p>{this.state.count1yen}</p> */}
             <li> <button><img src={coin1yen} alt="1yen" className="coin-img" onClick={() => this.handleClick1yen()} /></button> </li>
-            <p>{this.state.count5yen}</p>
+            {/* <p>{this.state.count5yen}</p> */}
             <li> <button onClick={() => this.handleClick5yen()}><img src={coin5yen} alt="1yen" className="coin-img" /></button> </li>
-            <p>{this.state.count10yen}</p>
+            {/* <p>{this.state.count10yen}</p> */}
             <li> <button onClick={() => this.handleClick10yen()}><img src={coin10yen} alt="1yen" className="coin-img" /></button> </li>
-            <p>{this.state.count50yen}</p>
+            {/* <p>{this.state.count50yen}</p> */}
             <li> <button onClick={() => this.handleClick50yen()}><img src={coin50yen} alt="1yen" className="coin-img" /></button> </li>
-            <p>{this.state.count100yen}</p>
+            {/* <p>{this.state.count100yen}</p> */}
             <li> <button onClick={() => this.handleClick100yen()}><img src={coin100yen} alt="1yen" className="coin-img" /></button> </li>
-            <p>{this.state.count500yen}</p>
+            {/* <p>{this.state.count500yen}</p> */}
             <li> <button onClick={() => this.handleClick500yen()}><img src={coin500yen} alt="1yen" className="coin-img" /></button> </li>
+            <button onClick={() => this.resetButton()}><img src={resetButton} alt="resetButton" className="coin-img" /></button>
           </ul>
-          <h1>合計金額：{this.state.count1yen+this.state.count5yen+this.state.count10yen+this.state.count50yen+this.state.count100yen+this.state.count500yen}円</h1>
+          <h1>合計金額：{this.state.count1yen + this.state.count5yen + this.state.count10yen + this.state.count50yen + this.state.count100yen + this.state.count500yen}円</h1>
+          <h3>お支払い方法</h3>
+          <img src={rakutenpayLogo} alt="rakuten" className="coin-img"/>
+          <img src={paypayLogo} alt="paypay" className="coin-img"/>
+          <img src={linepayLogo} alt="line" className="coin-img" />
         </div>
       </React.Fragment>
     )
