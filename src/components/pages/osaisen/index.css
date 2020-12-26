@@ -1,7 +1,5 @@
-
-
 .coins_alignment ul{
-    text-align: center;
+
 }
 .coins_alignment li{
     list-style-type: none;
@@ -23,8 +21,13 @@
 }
 .coin-img {
     width: 50px;
-    height: auto;
+    height: 50px;
+    margin: 1em;
 }
 .osaisen{
     text-align: center;
+}
+.offertory-box{
+    width: 30%;
+    height: auto;
 }
