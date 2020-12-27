@@ -119,7 +119,7 @@ class OmikujiPlay extends React.Component {
                   </this.DialogTitle>
                   <this.DialogContent dividers>
                       <Typography>
-                      {this.state.messages[0]}<br/>
+                      {this.state.messages[0]}<br/><br/>
                       </Typography>
                       <Typography gutterBottom>
                         {this.state.messages[1]}<br/>
@@ -134,8 +134,8 @@ class OmikujiPlay extends React.Component {
                   </this.DialogContent>
                   <setOmikujiMsg msg={this.state.msg}/>
                   <this.DialogActions>
-                      <Button autoFocus onClick={this.handleClose} color="primary">
-                          Back to Home
+                      <Button autoFocus onClick={this.handleClick} color="primary">
+                        もどる
                       </Button>
                   </this.DialogActions>
                 </Dialog>
