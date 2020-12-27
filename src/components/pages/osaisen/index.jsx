@@ -1,5 +1,5 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import './index.css';
 import coin1yen from '../../../assets/img/osaisen/coins/coin-1yen.png';
 import coin5yen from '../../../assets/img/osaisen/coins/coin-5yen.png';
@@ -19,9 +19,7 @@ import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import Bell from './bell';
-import PropTypes from 'prop-types'
-import { withRouter } from 'react-router'
-import backImage from '../../../assets/img/back.png'
+import backImage from '../../../assets/img/back.png';
 
 
 class Shrine extends React.Component {
@@ -127,51 +125,57 @@ class Shrine extends React.Component {
 
   render() {
     return (
+      <React.Fragment>
       <div id='page-box'>
         <Container className="centering">
           {this.displaySumMoney()}
           <img src={offertoryBox} alt="offertory-box" className="offertory-box centering" />
         </Container>
-          <Container className="coins-button centering">
-            <Row>
-              <Col md={2}>
-                <img src={coin1yen} alt="1yen" onClick={() => this.handleClick1yen()} className="coin-img" />
-              </Col>
-              <Col md={2}>
-                <img src={coin5yen} alt="5yen" onClick={() => this.handleClick5yen()} className="coin-img" />
-              </Col>
-              <Col md={2}>
-                <img src={coin10yen} alt="10yen" onClick={() => this.handleClick10yen()} className="coin-img" />
-              </Col>
-              <Col md={2}>
-                <img src={coin50yen} alt="50yen" onClick={() => this.handleClick50yen()} className="coin-img" />
-              </Col>
-              <Col md={2}>
-                <img src={coin100yen} alt="100yen" onClick={() => this.handleClick100yen()} className="coin-img" />
-              </Col>
-              <Col md={2}>
-                <img src={coin500yen} alt="500yen" onClick={() => this.handleClick500yen()} className="coin-img" />
-              </Col>
-            </Row>
-            <Row className='centering'>
-              <Col md={2} className='centering reset-button'>
-                <img src={resetCoin} alt="reset" onClick={() => this.resetState()} className="reset-button" />
-              </Col>
-              <Col md={2}>
-                <img src={paypay} alt="paypay" className="payment" onClick={this.handleClick} />
-              </Col>
-              <Col md={2}>
-                <img src={rakutenpay} alt="rakutenpay" className="payment" onClick={this.handleClick} />
-              </Col>
-              <Col md={2}>
-                <img src={linepay} alt="linepay" className="payment" onClick={this.handleClick} />
-              </Col>
-              <Col md={2} className='centering back-button'>
-              <img src={backImage} alt="back" onClick={this.handleClickBack}　className="back-button"/>
+        <Container className="coins-button centering">
+          <Row>
+            <Col md={2}>
+              <img src={coin1yen} alt="1yen" onClick={() => this.handleClick1yen()} className="coin-img" />
             </Col>
+            <Col md={2}>
+              <img src={coin5yen} alt="5yen" onClick={() => this.handleClick5yen()} className="coin-img" />
+            </Col>
+            <Col md={2}>
+              <img src={coin10yen} alt="10yen" onClick={() => this.handleClick10yen()} className="coin-img" />
+            </Col>
+            <Col md={2}>
+              <img src={coin50yen} alt="50yen" onClick={() => this.handleClick50yen()} className="coin-img" />
+            </Col>
+            <Col md={2}>
+              <img src={coin100yen} alt="100yen" onClick={() => this.handleClick100yen()} className="coin-img" />
+            </Col>
+            <Col md={2}>
+              <img src={coin500yen} alt="500yen" onClick={() => this.handleClick500yen()} className="coin-img" />
+            </Col>
+          </Row>
+          <Row className='centering'>
+            <Col md={3} className='centering reset-button'>
+              <img src={resetCoin} alt="reset" onClick={() => this.resetState()} className="reset-button" />
+            </Col>
+            <Col md={2}>
+              <img src={paypay} alt="paypay" className="payment" onClick={this.handleClick} />
+            </Col>
+            <Col md={2}>
+              <img src={rakutenpay} alt="rakutenpay" className="payment" onClick={this.handleClick} />
+            </Col>
+            <Col md={2}>
+              <img src={linepay} alt="linepay" className="payment" onClick={this.handleClick} />
+            </Col>
+          </Row>
+          </Container>
+          </div>
+          <Container className="coins-button centering">
+            <Row className='centering'>
+              <Col md={12}>
+                <img src={backImage} alt="back" onClick={this.handleClickBack}　className="back-button"/>
+              </Col>
             </Row>
-        </Container>
-      </div>
+          </Container>
+        </React.Fragment>
     )
   }
 }
