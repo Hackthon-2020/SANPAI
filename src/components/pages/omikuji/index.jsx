@@ -6,7 +6,6 @@ import backImage from '../../../assets/img/back.png'
 import './index.css'
 
 class Omikuji extends React.Component {
-
   static propTypes = {
     match: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
@@ -21,7 +20,6 @@ class Omikuji extends React.Component {
     return(
       <div>
         <h2 className="instructor">画像をクリックして、おみくじを引こう!</h2>
-        {/* <div><OmikujiPlay /></div> */}
         <div><OmikujiPlay /></div>
         <img onClick={this.handleClick} src={backImage} alt="back" className="backImg"/>
       </div>
