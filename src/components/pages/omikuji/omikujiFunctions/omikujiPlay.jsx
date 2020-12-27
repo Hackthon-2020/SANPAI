@@ -8,10 +8,11 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
-import omikujiImg from '../../../assets/img/omikuji/fuda.png'
-import setOmikuji from '../../funcs/setOmikuji';
-// import { useState } from 'react';import setOmikujiMsg from '../../funcs/setOmikujiMsg'
-import './index.css'
+import omikujiImg from '../../../../assets/img/omikuji/fuda.png'
+import setOmikuji from './setOmikuji';
+import PropTypes from 'prop-types'
+import { withRouter } from 'react-router'
+
 
 class OmikujiPlay extends React.Component {
     constructor(props) {
@@ -22,6 +23,15 @@ class OmikujiPlay extends React.Component {
             title: "",
 
         }
+    }
+
+    static propTypes = {
+      match: PropTypes.object.isRequired,
+      location: PropTypes.object.isRequired,
+      history: PropTypes.object.isRequired
+    }
+    handleClick=() => {
+      this.props.history.push('/')
     }
 
     styles = (theme) => ({
@@ -83,11 +93,6 @@ class OmikujiPlay extends React.Component {
         open: true,
         
       })
-      console.log(this.state.messages)
-      // [rand, msg] = setOmikuji()
-      // console.log(rand)
-      // console.log(msg)
-      // return(rand, msg)
     };
 
     displayMsg = ({message}) =>{
@@ -150,4 +155,4 @@ class OmikujiPlay extends React.Component {
     
 }
 
-export default OmikujiPlay;
+export default withRouter(OmikujiPlay);
