@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
+// import ReactDOM from 'react-dom';
 import './index.css';
 import coin1yen from '../../../assets/img/osaisen/coins/coin-1yen.png';
 import coin5yen from '../../../assets/img/osaisen/coins/coin-5yen.png';
@@ -18,8 +18,11 @@ import resetButton from '../../../assets/img/resetButton.jpg';
 import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
-import { ImageAspectRatioOutlined } from '@material-ui/icons';
 import Bell from './bell';
+import PropTypes from 'prop-types'
+import { withRouter } from 'react-router'
+import backImage from '../../../assets/img/back.png'
+
 
 class Shrine extends React.Component {
   constructor(props) {
@@ -39,6 +42,10 @@ class Shrine extends React.Component {
     match: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired
+  }
+
+  handleClickBack=() => {
+    this.props.history.push('/')
   };
 
   componentDidUpdate() {
@@ -147,22 +154,25 @@ class Shrine extends React.Component {
               </Col>
             </Row>
             <Row className='centering'>
-              <Col md={3} className='centering reset-button'>
+              <Col md={2} className='centering reset-button'>
                 <img src={resetCoin} alt="reset" onClick={() => this.resetState()} className="reset-button" />
               </Col>
-              <Col md={3}>
+              <Col md={2}>
                 <img src={paypay} alt="paypay" className="payment" onClick={this.handleClick} />
               </Col>
-              <Col md={3}>
+              <Col md={2}>
                 <img src={rakutenpay} alt="rakutenpay" className="payment" onClick={this.handleClick} />
               </Col>
-              <Col md={3}>
+              <Col md={2}>
                 <img src={linepay} alt="linepay" className="payment" onClick={this.handleClick} />
               </Col>
+              <Col md={2} className='centering back-button'>
+              <img src={backImage} alt="back" onClick={this.handleClickBack}　className="back-button"/>
+            </Col>
             </Row>
         </Container>
       </div>
     )
   }
 }
-export default withRouter(Shrine);
+  export default withRouter(Shrine);
