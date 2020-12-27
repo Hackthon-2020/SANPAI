@@ -15,9 +15,10 @@ import paypay from '../../../assets/img/osaisen/payments/paypay.jpg';
 import linepay from '../../../assets/img/osaisen/payments/linepay.png';
 import rakutenpay from '../../../assets/img/osaisen/payments/rakutenpay.jpg';
 import resetButton from '../../../assets/img/resetButton.jpg';
-import { useHistory } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router';
+import PropTypes from 'prop-types'
+import { withRouter } from 'react-router'
+import backImage from '../../../assets/img/back.png'
+
 
 class Shrine extends React.Component {
   constructor(props) {
@@ -36,6 +37,10 @@ class Shrine extends React.Component {
     match: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired
+  }
+
+  handleClickBack=() => {
+    this.props.history.push('/')
   };
 
   handleClick = () => {
@@ -154,6 +159,9 @@ class Shrine extends React.Component {
             </Col>
             <Col md={1}>
               <img src={linepay} alt="linepay" className="payment" onClick={this.handleClick} />
+            </Col>
+            <Col md={12} className='centering back-button'>
+              <img src={backImage} alt="back" onClick={this.handleClickBack}　className="back-button"/>
             </Col>
           </Row>
         </Container>
