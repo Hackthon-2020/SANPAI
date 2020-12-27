@@ -42,12 +42,18 @@ body {
     font-weight: bold;
 }
 .reset-button {
-    width: 20%;
-    max-width: 120px;
+    width: 7em;
+    max-width: 300px;
     border-radius: 30px;
 }
 
 .payment{
-    width: 100%;
+    width: 30%;
     height: auto;
+    border-radius: 1em;
+}
+.bell-img {
+    width: auto;
+    height: 10%;
+    max-height: 500px;
 }
