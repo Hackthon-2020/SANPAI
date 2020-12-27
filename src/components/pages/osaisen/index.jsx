@@ -15,7 +15,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import linepay from '../../../assets/img/osaisen/payments/linepay.png';
 // import rakutenpay from '../../../assets/img/osaisen/payments/rakutenpay.jpg';
 import resetButton from '../../../assets/img/resetButton.jpg';
-// import { useHistory } from 'react-router-dom';
+import PropTypes from 'prop-types'
+import { withRouter } from 'react-router'
+import backImage from '../../../assets/img/back.png'
 
 class Shrine extends React.Component {
   constructor(props) {
@@ -28,6 +30,16 @@ class Shrine extends React.Component {
       count100yen: 0,
       count500yen: 0,
     };
+  }
+
+  static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  }
+
+  handleClick=() => {
+    this.props.history.push('/')
   }
 
   // componentDidMount(){
@@ -128,6 +140,9 @@ class Shrine extends React.Component {
             <Col md={12} className='centering reset-button'>
               <img src={resetCoin} alt="reset" onClick={() => this.resetState()}　className="reset-button"/>
             </Col>
+            <Col md={12} className='centering back-button'>
+              <img src={backImage} alt="back" onClick={this.handleClick}　className="back-button"/>
+            </Col>
           </Row>
         </Container>
       </React.Fragment>
@@ -135,4 +150,4 @@ class Shrine extends React.Component {
   }
 }
 
-export default Shrine;
+export default withRouter(Shrine);

@@ -10,9 +10,11 @@ import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import omikujiImg from '../../../assets/img/omikuji/omikuji-box.png'
 import setOmikuji from '../../funcs/setOmikuji';
-// import setOmikuji from './setOmikuji'
-// import { useState } from 'react';
 import setOmikujiMsg from '../../funcs/setOmikujiMsg'
+import PropTypes from 'prop-types'
+import { withRouter } from 'react-router'
+import backImage from '../../../assets/img/back.png'
+
 
 class OmikujiPlay extends React.Component {
     constructor(props) {
@@ -22,6 +24,15 @@ class OmikujiPlay extends React.Component {
             msg: "",
             res: null,
         }
+    }
+
+    static propTypes = {
+      match: PropTypes.object.isRequired,
+      location: PropTypes.object.isRequired,
+      history: PropTypes.object.isRequired
+    }
+    handleClick=() => {
+      this.props.history.push('/')
     }
 
     styles = (theme) => ({
@@ -111,7 +122,7 @@ class OmikujiPlay extends React.Component {
                 <setOmikujiMsg msg={this.state.msg}/>
                 <this.DialogActions>
                     <Button autoFocus onClick={this.handleClose} color="primary">
-                        もどる
+                      <img onClick={this.handleClick} src={backImage} alt="back button" className="backImg"/>
                     </Button>
                 </this.DialogActions>
                 </Dialog>
@@ -121,4 +132,4 @@ class OmikujiPlay extends React.Component {
     
 }
 
-export default OmikujiPlay;
+export default withRouter(OmikujiPlay);
