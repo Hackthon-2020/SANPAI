@@ -6,8 +6,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from "@material-ui/core/styles";
 import SimpleDialog from '../../modal/dialog';
-// import PropTypes from 'prop-types';
-
 
 
 const useStyles = makeStyles({
@@ -23,12 +21,6 @@ const useStyles = makeStyles({
     height: 300,
   },
 });
-
-// SimpleDialog.propTypes = {
-//   onClose: PropTypes.func.isRequired,
-//   open: PropTypes.bool.isRequired,
-//   selectedValue: PropTypes.string.isRequired,
-// };
 
 
 export default function ImgCard (props){

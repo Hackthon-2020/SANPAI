@@ -8,12 +8,12 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
-import omikujiImg from '../../../assets/img/omikuji/omikuji-box.png'
-import setOmikuji from '../../funcs/setOmikuji';
-import setOmikujiMsg from '../../funcs/setOmikujiMsg'
+import omikujiImg from '../../../../assets/img/omikuji/omikuji-box.png'
+import setOmikuji from './setOmikuji';
+import setOmikujiMsg from './setOmikujiMsg'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router'
-import backImage from '../../../assets/img/back.png'
+import backImage from '../../../../assets/img/back.png'
 
 
 class OmikujiPlay extends React.Component {
@@ -82,10 +82,6 @@ class OmikujiPlay extends React.Component {
         open: true,
         
       })
-      // [rand, msg] = setOmikuji()
-      // console.log(rand)
-      // console.log(msg)
-      // return(rand, msg)
     };
 
     handleClose = () => {

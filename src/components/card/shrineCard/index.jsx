@@ -5,7 +5,6 @@ import Dazaifu from '../../../assets/img/shrine/dazaifu.jpg';
 import Miyajidake from '../../../assets/img/shrine/miyajidake.jpg';
 import Miyajima from '../../../assets/img/shrine/miyajima.jpg';
 import Inari from '../../../assets/img/shrine/inari.jpg';
-
 import ImgCard from '../imgCard/index';
 import Grid from "@material-ui/core/Grid";
 
