@@ -20,7 +20,8 @@ class Omikuji extends React.Component {
   render(){
     return(
       <div>
-        <h2>画像をクリックして、おみくじを引こう!</h2>
+        <h2 className="instructor">画像をクリックして、おみくじを引こう!</h2>
+        {/* <div><OmikujiPlay /></div> */}
         <div><OmikujiPlay /></div>
         <img onClick={this.handleClick} src={backImage} alt="back" className="backImg"/>
       </div>

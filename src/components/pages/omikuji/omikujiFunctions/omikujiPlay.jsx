@@ -8,12 +8,10 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
-import omikujiImg from '../../../../assets/img/omikuji/omikuji-box.png'
+import omikujiImg from '../../../../assets/img/omikuji/fuda.png'
 import setOmikuji from './setOmikuji';
-import setOmikujiMsg from './setOmikujiMsg'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router'
-import backImage from '../../../../assets/img/back.png'
 
 
 class OmikujiPlay extends React.Component {
@@ -21,8 +19,9 @@ class OmikujiPlay extends React.Component {
         super(props)
         this.state = {
             open:false,
-            msg: "",
-            res: null,
+            messages: [],
+            title: "",
+
         }
     }
 
@@ -76,13 +75,31 @@ class OmikujiPlay extends React.Component {
       },
     }))(MuiDialogActions)
 
+    // setOikujiMsg = () => {
+    //   const setDataset = this.state.dataset[this.state.msgId];
+    //   const setMessages = setDataset.messages;
+    //   this.setState({
+    //     messages: setDataset.messages
+    //   })
+    // }
+    
+    // componentDidUpdate() {
+    //   this.setOikujiMsg()
+    // }
+
     handleClickOpen = () => {
-      [this.state.res, this.state.msg] = setOmikuji();
+      [this.state.title, this.state.messages] = setOmikuji();
       this.setState({
         open: true,
         
       })
     };
+
+    displayMsg = ({message}) =>{
+      <Typography>
+        {message}
+      </Typography>
+    }
 
     handleClose = () => {
       this.setState({
@@ -95,32 +112,42 @@ class OmikujiPlay extends React.Component {
     render(){
         return (
             <div>
-                <img src={omikujiImg} onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
+                <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
+                <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
+                <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
+                <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
+                <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
+                <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
+                <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
+
                 <Dialog onClose={this.handleClose} aria-labelledby="customized-dialog-title" open={this.state.open}>
-                <this.DialogTitle id="customized-dialog-title" onClose={this.handleClose}>
-                    おみくじ結果:{this.state.msg}
-                </this.DialogTitle>
-                <this.DialogContent dividers>
-                    <Typography gutterBottom>
-                        今年のあなたの運勢はまあまあ良いですよ。<br/>
-                        {/* TextType = {this.state.res %20} */}
-                    </Typography>
-                    <Typography gutterBottom>
-                        ラッキーカラー：赤
-                    </Typography>
-                    <Typography gutterBottom>
-                    ラッキーアイテム：折りたたみ傘
-                    </Typography>
-                    <Typography gutterBottom>
-                        その他
-                    </Typography>
-                </this.DialogContent>
-                <setOmikujiMsg msg={this.state.msg}/>
-                <this.DialogActions>
-                    <Button autoFocus onClick={this.handleClose} color="primary">
-                      <img onClick={this.handleClick} src={backImage} alt="back button" className="backImg"/>
-                    </Button>
-                </this.DialogActions>
+                  <this.DialogTitle id="customized-dialog-title" onClose={this.handleClose}>
+                      おみくじ結果:{this.state.title}
+                  </this.DialogTitle>
+                  <this.DialogContent dividers>
+                      {/* {this.state.messages.map((value)=>
+                        <this.displayMsg message={value}/>
+                      )} */}
+                      <Typography>
+                      {this.state.messages[0]}<br/>
+                      </Typography>
+                      <Typography gutterBottom>
+                        {this.state.messages[1]}<br/>
+                        {this.state.messages[2]}<br/>
+                        {this.state.messages[3]}<br/>
+                        {this.state.messages[4]}<br/>
+                        {this.state.messages[5]}<br/>
+                        {this.state.messages[6]}<br/>
+                        {this.state.messages[7]}<br/>
+                        {this.state.messages[8]}<br/>
+                      </Typography>
+                  </this.DialogContent>
+                  <setOmikujiMsg msg={this.state.msg}/>
+                  <this.DialogActions>
+                      <Button autoFocus onClick={this.handleClose} color="primary">
+                          Back to Home
+                      </Button>
+                  </this.DialogActions>
                 </Dialog>
             </div>
         );
