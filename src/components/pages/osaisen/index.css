@@ -46,3 +46,8 @@ body {
     max-width: 120px;
     border-radius: 30px;
 }
+
+.payment{
+    width: 100%;
+    height: auto;
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import coin1yen from '../../../assets/img/osaisen/coins/coin-1yen.png';
@@ -9,13 +9,15 @@ import coin100yen from '../../../assets/img/osaisen/coins/coin-100yen.png';
 import coin500yen from '../../../assets/img/osaisen/coins/coin-500yen.png';
 import offertoryBox from '../../../assets/img/osaisen/offertory-box.png';
 import resetCoin from '../../../assets/img/osaisen/reset-coins.png';
-import {Button, Container, Col, Row } from 'react-bootstrap';
+import { Button, Container, Col, Row } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-// import paypay from '../../../assets/img/osaisen/payments/paypay.jpg';
-// import linepay from '../../../assets/img/osaisen/payments/linepay.png';
-// import rakutenpay from '../../../assets/img/osaisen/payments/rakutenpay.jpg';
+import paypay from '../../../assets/img/osaisen/payments/paypay.jpg';
+import linepay from '../../../assets/img/osaisen/payments/linepay.png';
+import rakutenpay from '../../../assets/img/osaisen/payments/rakutenpay.jpg';
 import resetButton from '../../../assets/img/resetButton.jpg';
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router';
 
 class Shrine extends React.Component {
   constructor(props) {
@@ -30,6 +32,17 @@ class Shrine extends React.Component {
     };
   }
 
+  static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  };
+
+  handleClick = () => {
+    this.props.history.push('/payment')
+    console.log("check!")
+  }
+
   // componentDidMount(){
 
   // }
@@ -40,23 +53,24 @@ class Shrine extends React.Component {
       element = <h1 className="sum-money"> 合計金額：{sumMoney}円 </h1>;
     }
     else {
+      window.alert("合計金額が１万円以上は選択でき来ません。\n もう一度金額指定をしてください。");
       this.resetState()
       sumMoney = 0;
       console.log('alearted')
       element = <React.Fragment>
-          <h1 className="sum-money">
-             合計金額：{sumMoney}円
+        <h1 className="sum-money">
+          合計金額：{sumMoney}円
           </h1>
-        </React.Fragment>;
+      </React.Fragment>;
     }
-    return(element)
+    return (element)
   }
 
   componentDidUpdate() {
   }
   handleClick1yen() {
     this.setState({
-      count1yen: this.state.count1yen + 1,
+      count1yen: this.state.count1yen + 1
     });
     console.log(this.state.count1yen)
   }
@@ -101,32 +115,45 @@ class Shrine extends React.Component {
       <React.Fragment>
         <Container className="centering">
           {this.displaySumMoney()}
-          <img src={offertoryBox} alt="offertory-box" className="offertory-box centering"/>
+          <img src={offertoryBox} alt="offertory-box" className="offertory-box centering" />
         </Container>
         <Container className="coins-button centering">
           <Row>
             <Col md={2}>
-              <img src={coin1yen} alt="1yen" onClick={() => this.handleClick1yen()} className="coin-img"/>
+              <img src={coin1yen} alt="1yen" onClick={() => this.handleClick1yen()} className="coin-img" />
             </Col>
             <Col md={2}>
-              <img src={coin5yen} alt="5yen" onClick={() => this.handleClick5yen()} className="coin-img"/>
+              <img src={coin5yen} alt="5yen" onClick={() => this.handleClick5yen()} className="coin-img" />
             </Col>
             <Col md={2}>
-              <img src={coin10yen} alt="10yen" onClick={() => this.handleClick10yen()} className="coin-img"/>
+              <img src={coin10yen} alt="10yen" onClick={() => this.handleClick10yen()} className="coin-img" />
             </Col>
             <Col md={2}>
-              <img src={coin50yen} alt="50yen" onClick={() => this.handleClick50yen()} className="coin-img"/>
+              <img src={coin50yen} alt="50yen" onClick={() => this.handleClick50yen()} className="coin-img" />
             </Col>
             <Col md={2}>
-              <img src={coin100yen} alt="100yen" onClick={() => this.handleClick100yen()} className="coin-img"/>
+              <img src={coin100yen} alt="100yen" onClick={() => this.handleClick100yen()} className="coin-img" />
             </Col>
             <Col md={2}>
-              <img src={coin500yen} alt="500yen" onClick={() => this.handleClick500yen()} className="coin-img"/>
+              <img src={coin500yen} alt="500yen" onClick={() => this.handleClick500yen()} className="coin-img" />
             </Col>
           </Row>
           <Row>
             <Col md={12} className='centering reset-button'>
-              <img src={resetCoin} alt="reset" onClick={() => this.resetState()}　className="reset-button"/>
+              <img src={resetCoin} alt="reset" onClick={() => this.resetState()} className="reset-button" />
+            </Col>
+          </Row>
+        </Container>
+        <Container className='centering payment'>
+          <Row>
+            <Col md={1}>
+              <img src={paypay} alt="paypay" className="payment" onClick={this.handleClick} />
+            </Col>
+            <Col md={1}>
+              <img src={rakutenpay} alt="rakutenpay" className="payment" onClick={this.handleClick} />
+            </Col>
+            <Col md={1}>
+              <img src={linepay} alt="linepay" className="payment" onClick={this.handleClick} />
             </Col>
           </Row>
         </Container>
@@ -135,4 +162,4 @@ class Shrine extends React.Component {
   }
 }
 
-export default Shrine;
+export default withRouter(Shrine);
