@@ -21,7 +21,6 @@ class OmikujiPlay extends React.Component {
             open:false,
             messages: [],
             title: "",
-
         }
     }
 
@@ -75,18 +74,6 @@ class OmikujiPlay extends React.Component {
       },
     }))(MuiDialogActions)
 
-    // setOikujiMsg = () => {
-    //   const setDataset = this.state.dataset[this.state.msgId];
-    //   const setMessages = setDataset.messages;
-    //   this.setState({
-    //     messages: setDataset.messages
-    //   })
-    // }
-    
-    // componentDidUpdate() {
-    //   this.setOikujiMsg()
-    // }
-
     handleClickOpen = () => {
       [this.state.title, this.state.messages] = setOmikuji();
       this.setState({
@@ -94,12 +81,6 @@ class OmikujiPlay extends React.Component {
         
       })
     };
-
-    displayMsg = ({message}) =>{
-      <Typography>
-        {message}
-      </Typography>
-    }
 
     handleClose = () => {
       this.setState({
@@ -112,22 +93,31 @@ class OmikujiPlay extends React.Component {
     render(){
         return (
             <div>
+              <ul className="fudas">
+                <li>
                 <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
+                </li>
+                <li>
                 <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
+                </li>
+                <li>
                 <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
+                </li>
+                <li>
                 <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
+                </li>
+                <li>
                 <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
+                </li>
+                <li>
                 <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
-                <img src={omikujiImg} className="fuda" onClick={this.handleClickOpen} alt="おみくじの画像が表示できませんでした。ごめんなさい。" title="クリックでおみくじを引く" />
-
+                </li>
+              </ul>
                 <Dialog onClose={this.handleClose} aria-labelledby="customized-dialog-title" open={this.state.open}>
                   <this.DialogTitle id="customized-dialog-title" onClose={this.handleClose}>
                       おみくじ結果:{this.state.title}
                   </this.DialogTitle>
                   <this.DialogContent dividers>
-                      {/* {this.state.messages.map((value)=>
-                        <this.displayMsg message={value}/>
-                      )} */}
                       <Typography>
                       {this.state.messages[0]}<br/>
                       </Typography>
