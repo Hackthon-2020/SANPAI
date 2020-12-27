@@ -15,7 +15,7 @@ export default function SimpleDialog(props) {
 
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      <DialogTitle id="simple-dialog-title">{props.text}を選択中</DialogTitle>
+      <DialogTitle id="simple-dialog-title">{props.text}で</DialogTitle>
       <List>
         <ListItem button >
           <ListItemText primary="おみくじを引く" onClick={()=>history.push('/omikuji')}/>

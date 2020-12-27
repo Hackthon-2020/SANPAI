@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
+// import ReactDOM from 'react-dom';
 import './index.css';
 import coin1yen from '../../../assets/img/osaisen/coins/coin-1yen.png';
 import coin5yen from '../../../assets/img/osaisen/coins/coin-5yen.png';
@@ -9,12 +9,12 @@ import coin100yen from '../../../assets/img/osaisen/coins/coin-100yen.png';
 import coin500yen from '../../../assets/img/osaisen/coins/coin-500yen.png';
 import offertoryBox from '../../../assets/img/osaisen/offertory-box.png';
 import resetCoin from '../../../assets/img/osaisen/reset-coins.png';
-import { Button, Container, Col, Row } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import paypay from '../../../assets/img/osaisen/payments/paypay.jpg';
 import linepay from '../../../assets/img/osaisen/payments/linepay.png';
 import rakutenpay from '../../../assets/img/osaisen/payments/rakutenpay.jpg';
-import resetButton from '../../../assets/img/resetButton.jpg';
+// import resetButton from '../../../assets/img/resetButton.jpg';
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router'
 import backImage from '../../../assets/img/back.png'

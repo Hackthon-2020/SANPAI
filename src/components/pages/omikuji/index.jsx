@@ -1,5 +1,5 @@
 import React from 'react'
-import OmikujiPlay from './omikujiPlay'
+import OmikujiPlay from './omikujiFunctions/omikujiPlay'
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router'
 import backImage from '../../../assets/img/back.png'
