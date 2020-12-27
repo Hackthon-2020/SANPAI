@@ -4,7 +4,6 @@ import Navigation from '../navigation/index';
 import Omikuji from '../../pages/omikuji/index';
 import Home from '../../pages/home/index';
 import Osaisen from '../../pages/osaisen/index';
-// import { Payment } from '@material-ui/icons';
 import Payment from '../../pages/payment/index'
 
 

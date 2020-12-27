@@ -1,11 +1,13 @@
 import React from 'react'
+import OmikujiPlay from './omikujiPlay'
 
 class Omikuji extends React.Component {
+
   render(){
     return(
       <div>
-        <h1>{this.props.name}</h1>
-        <h2>{this.props.text}おみくじを引いてください。</h2>
+        <h2>画像をクリックして、おみくじを引こう!</h2>
+        <div><OmikujiPlay /></div>
       </div>
     )
   }
