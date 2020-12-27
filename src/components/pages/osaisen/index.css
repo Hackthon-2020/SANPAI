@@ -7,7 +7,7 @@ body {
   background-position: center center;
   background-attachment: fixed;
   background-color: rgba(255, 255, 255, 0.6);
-  height: 100%;
+  background-size: cover;
 }
 .coins_alignment {
   display: inline-block;
@@ -37,24 +37,41 @@ body {
 }
 .coins-button {
   position: relative;
-  bottom: 5em;
+  bottom: 7em;
 }
 .sum-money {
-  padding-top: 1em;
+  padding-top: 0.5em;
   font-weight: bold;
 }
 .reset-button {
-  width: 20%;
-  max-width: 120px;
-  border-radius: 30px;
-}
-.back-button {
-  width: 20%;
-  max-width: 120px;
-  border-radius: 30px;
+    width: 7em;
+    max-width: 300px;
+    border-radius: 30px;
+    padding-top: 0.2em;
 }
 
-.payment {
-  width: 100%;
-  height: auto;
+.payment{
+    width: 70px;
+    height: auto;
+    border-radius: 20px;
+}
+.bell-img {
+    width: auto;
+    height: 80%;
+    max-height: 500px;
+}
+.back-button {
+    position: relative;
+    top: 6em;
+    width: auto;
+    height: 30%;
+    background-color: whitesmoke;
+    border-radius: 0.7em;
+}
+.top-message {
+    padding-top: 1em;
+    overflow: hidden;
+}
+.all {
+    overflow: hidden;
 }
